@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-
+input:focus, a:focus, input:active, a:active{
+	outline: none !important;
+	box-shadow: none !important;
+}  
 .brand{
 	height: 53px;
 }
