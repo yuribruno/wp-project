@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-input:focus, a:focus, input:active, a:active{
+input:focus, a:focus, input:active, a:active, input:focus, a:focus{
 	outline: none !important;
 	box-shadow: none !important;
 	text-decoration: none;
