@@ -17,16 +17,16 @@
 				<form id="form-simulador" action="" method="post">
 					<input type="text" name="nome" id="nome" placeholder="Nome" />
                     <input type="text" name="email" id="email" placeholder="Email" />
-                    <input type="text" name="telefone" id="telefone" placeholder="Telefone" />
+                    <input type="text" name="telefone" id="telefone" placeholder="Telefone" class="telefone" />
                     <label for="valor-de">Simular por valor de:</label>
                     <div style="display: flex;">
                     	<div class="radio-container">
 	                    	<input type="radio" id="parcela" name="valor-de" value="Parcela" checked>
-	                    	<span class="checkmark">Parcela</span>
+	                    	<span class="checkmark" id="parcela-checkmark">Parcela</span>
 	                	</div>
 	                    <div class="radio-container">
 	                    	<input type="radio" id="credito" name="valor-de" value="Crédito">
-	                    	<span class="checkmark">Crédito</span>
+	                    	<span class="checkmark" id="credito-checkmark">Crédito</span>
 	                	</div>
 	                </div>
                     <label for="range">Selecione o valor da parcela: <output style="color: #3A9D12;
@@ -72,7 +72,9 @@
 							}
 						?>
                     </select>
-                    <input type="submit" value="Quero receber uma consultoria" id="salvar" />
+                    <br>
+                    <br>
+                    <input type="submit" value="Quero receber uma simulação" id="salvar" />
 				</form>
 			</div>
 		</div>
@@ -89,7 +91,7 @@
 				<form id="form-consultoria" action="" method="post">
                     <input type="text" name="nome" id="nome" placeholder="Nome" />
                     <input type="text" name="email" id="email" placeholder="Email" />
-                    <input type="text" name="telefone" id="telefone" placeholder="Telefone" />
+                    <input type="text" name="telefone" id="telefone" placeholder="Telefone" class="telefone" />
                     <br/><br/>
                     <input type="submit" value="Quero receber uma consultoria" id="salvar" />
                 </form>
@@ -121,10 +123,14 @@
 		 				<span style="color: #DDBE6C;  font-family: Lato;  font-size: 22px;  font-weight: 700;  line-height: 28px;text-align: right; display: block;">
 		 					ENTRE EM CONTATO
 		 				</span>
-		 				<p style="color: #FFFFFF;font-family: Lato;font-size: 14px;font-weight: 700;line-height: 23px;text-align: right;">atendimento@consorciochevroletonline.com.br  <i class="far fa-envelope" style="font-size: 14px;margin-left: 5px;"></i>
-		 				<p style="color: #FFFFFF;font-family: Lato;font-size: 14px;font-weight: 700;line-height: 23px;text-align: right;">0800 030 1471  <i class="fas fa-phone" style="margin-left: 5px;"></i></p>
-		 				<a href="" class="link-face-rodape"><i class="fab fa-facebook-f"></i></a>
-		 				<a href="" class="link-insta-rodape"><i class="fab fa-instagram"></i></a>
+		 				<a href="mailto:atendimento@consorciochevroletonline.com.br">
+		 					<p style="color: #FFFFFF;font-family: Lato;font-size: 14px;font-weight: 700;line-height: 23px;text-align: right;">atendimento@consorciochevroletonline.com.br  <i class="far fa-envelope" style="font-size: 14px;margin-left: 5px;"></i>
+		 					</p>
+		 				</a>
+		 					<p style="color: #FFFFFF;font-family: Lato;font-size: 14px;font-weight: 700;line-height: 23px;text-align: right;">0800 030 1471  <i class="fas fa-phone" style="margin-left: 5px;"></i>
+		 					</p>
+		 				<a href="https://www.facebook.com/consorciochevroletonlineoficial/" target="_blank" class="link-face-rodape"><i class="fab fa-facebook-f"></i></a>
+		 				<a href="https://www.instagram.com/consorciochevroletonline/" target="_blank" class="link-insta-rodape"><i class="fab fa-instagram"></i></a>
 		 			</div>
 		 		</div>
 		 	</div>
@@ -133,6 +139,22 @@
 </footer>
 
 	<?php wp_footer(); ?>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+	<script type="text/javascript">
+		jQuery("input.telefone").mask("(99) 9999-9999?9").focusout(function (event) {  
+		    var target, phone, element;  
+		    target = (event.currentTarget) ? event.currentTarget : event.srcElement;  
+		    phone = target.value.replace(/\D/g, '');
+		    element = $(target);  
+		    element.unmask();  
+		    if(phone.length > 10) {  
+		        element.mask("(99) 99999-999?9");  
+		    } else {  
+		        element.mask("(99) 9999-9999?9");  
+		    }  
+		});
+	</script>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.2/rangeslider.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/rangeslider.js/2.3.2/rangeslider.min.css">
     <script>

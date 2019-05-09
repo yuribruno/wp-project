@@ -63,6 +63,7 @@
     border-radius: 8px;
     width: 277px;
     height: 33px;
+    color: #fff;
     background: transparent;
 }
 .navbar-form .form-group{
@@ -272,12 +273,12 @@ hr {
 }
 .simulador-tile p {
     text-align: center;
-    color: #FFFFFF;
-    font-family: Lato;
+    color: #FFFFFF !important;
+    font-family: Lato !important;
     font-size: 20px;
     letter-spacing: 0.02em;
-    font-weight: 700;
-    line-height: 23px;
+    font-weight: 700 !important;
+    line-height: 24px !important;
     margin: 0;
 }
 .simulador-tile {
@@ -561,9 +562,6 @@ select {
 .modal-body {
     padding: 50px;
 }
-.modal-dialog {
-    width: 50vw;
-}
 input[type=submit] {
     background-color: #3A9D12;
     border-radius: 10px;
@@ -571,4 +569,20 @@ input[type=submit] {
     font-family: Lato;
     font-size: 30px;
     font-weight: 900;
+}
+.container-fluid.post-banner img {
+    width: 100%;
+    height: auto;
+}
+div#bs-example-navbar-collapse-1 input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+div#bs-example-navbar-collapse-1 input::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+div#bs-example-navbar-collapse-1 input:-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+div#bs-example-navbar-collapse-1 input:-moz-placeholder { /* Firefox 18- */
+  color: #fff;
 }

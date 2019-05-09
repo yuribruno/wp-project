@@ -6,3 +6,6 @@ $('.full-banner').slick({
 	cssEase: 'linear'
 });
 
+$('span.checkmark').on('click', function(){
+	$(this).parent().find('input').click();
+});
