@@ -2,6 +2,7 @@
 input:focus, a:focus, input:active, a:active{
 	outline: none !important;
 	box-shadow: none !important;
+	text-decoration: none;
 }  
 .brand{
 	height: 53px;
