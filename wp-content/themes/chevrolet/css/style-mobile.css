@@ -1,0 +1,183 @@
+img.brand {
+    width: 60%;
+    height: auto;
+    margin: 8px 15px 8px 0;
+}
+button.btn-default.pull-right {
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+}
+h1.brand-blog {
+    display: none;
+}
+.navbar-toggle .icon-bar {
+    background: #4a4d54;
+}
+.navbar-toggle {
+    border: 1px solid #4a4d54;
+}
+.navbar-default .navbar-form {
+    width: 100%;
+    justify-content: center;
+}
+nav.navbar.navbar-default {
+    position: initial;
+}
+.navbar-default .navbar-collapse.in {
+    width: 80vw;
+    background: #4a4d54;
+    z-index: 99999999999;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+ul.nav.navbar-nav {
+    margin: 0;
+    display: inline-block;
+}
+ul.nav.navbar-nav li a {
+    white-space: nowrap;
+    font-size: 100% !important;
+}
+.collapsing {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    display: none;
+}
+div#menu button.navbar-toggle {
+    margin: 15px 0;
+    width: 44px;
+    height: 34px;
+    color: #fff;
+    font-size: 18px;
+    padding: 0;
+    margin-left: auto;
+}
+.banner-contact-left p {
+    font-size: 18px;
+    line-height: 20px;
+}
+.banner-contact-left span {
+    font-size: 26px;
+    line-height: 29px;
+}
+.banner-contact-right span {
+    font-size: 39px;
+}
+.list-post .thumb, .list-post .info{
+	margin: 15px 0 !important;
+}
+.last-post .row {
+	margin: 0 -15px;
+}
+.slick-slide img {
+    width: auto;
+    height: 200px;
+    position: absolute;
+    left: -55%;
+    right: 0;
+}
+.slick-initialized .slick-slide {
+    display: block;
+    height: 200px;
+    overflow: hidden;
+}
+.logo-rodape {
+    height: 50px;
+}
+.logo-rodape-2 {
+    height: 50px;
+    margin-left: 15px;
+}
+span.footer-contato-header {
+    font-size: 15px;
+    text-align: center;
+}
+.footer-email, .footer-telefone {
+    font-size: 12px;
+    text-align: center;
+}
+.footer-redes {
+    display: flex;
+    justify-content: center;
+}
+div#comments h3, .form-auth label {
+    font-size: 18px;
+    line-height: 24px;
+}
+.form-auth div {
+	width: 100%;
+	margin-bottom: 15px;
+}
+.form-auth {
+    flex-wrap: wrap;
+}
+div#comments {
+    padding: 25px;
+}
+input.commentsubmit {
+    width: 100% !important;
+}
+.modal-body {
+    padding: 25px;
+}
+button.close {
+    right: 0;
+    top: -55px;
+}
+.modal-body input {
+    height: 50px;
+    font-size: 16px;
+}
+input[type=submit] {
+    font-size: 100%;
+    border: 0;
+}
+.modal-body label {
+    font-size: 16px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal-body input[type=radio] {
+	height: 50px;
+}
+li.categories {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 15px;
+}
+li.categories ul a {
+    font-size: 15px;
+}
+span.checkmark{
+	line-height: 55px;
+	font-size: 20px;
+}
+output {
+    font-size: 16px !important;
+    padding: 0;
+    line-height: 20px !important;
+}
+.modal-body label span {
+	width: 50%;
+    display: block;
+}
+select {
+    height: 50px;
+    font-size: 100%;
+}
+.logo-rodape-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+}

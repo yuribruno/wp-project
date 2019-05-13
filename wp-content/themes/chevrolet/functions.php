@@ -167,3 +167,76 @@ function get_custom_search_form( $echo = true ) {
         return $result;
     }
 }
+
+add_action( 'wp_ajaxurl', 'send_consultoria' );
+add_action( 'wp_ajax_send_consultoria', 'send_consultoria' );
+add_action( 'wp_ajax_nopriv_send_consultoria', 'send_consultoria' );
+function send_consultoria() {
+    if( isset($_POST["nome"]) && !empty($_POST["nome"]) &&
+        isset($_POST["email"]) && !empty($_POST["email"]) &&
+        isset($_POST["telefone"]) && !empty($_POST["telefone"]) ){
+        
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $telefone = $_POST['telefone'];
+        
+        $mensagem  = 'Nome: '.$nome.'\n';
+        $mensagem .= 'Email: '.$email.'\n';
+        $mensagem .= 'Telefone: '.$telefone.'\n';
+
+        if ( wp_mail('yuri.bruno@agencia.life', 'Contato', $mensagem) ){
+            echo "Sua mensagem foi enviada.";
+        } else {
+            echo "Erro, tente novamente.";
+        }           
+
+        wp_die();
+    } else {
+        wp_die('Todos os campos são obrigatórios.');
+    }
+}
+
+add_action( 'wp_ajaxurl', 'send_simulador' );
+add_action( 'wp_ajax_send_simulador', 'send_simulador' );
+add_action( 'wp_ajax_nopriv_send_simulador', 'send_simulador' );
+function send_simulador() {
+    if( isset($_POST["nome"]) && !empty($_POST["nome"]) &&
+        isset($_POST["email"]) && !empty($_POST["email"]) &&
+        isset($_POST["telefone"]) && !empty($_POST["telefone"]) &&
+        isset($_POST["tipo"]) && !empty($_POST["tipo"]) &&
+        isset($_POST["parcela"]) && !empty($_POST["parcela"]) &&
+        isset($_POST["credito"]) && !empty($_POST["credito"]) &&
+        isset($_POST["modelo"]) && !empty($_POST["modelo"]) ){
+
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $telefone = $_POST['telefone'];
+        $tipo = $_POST['tipo'];
+        $parcela = $_POST['parcela'];
+        $credito = $_POST['credito'];
+        $modelo = $_POST['telefone'];
+        
+        $mensagem  = 'Nome: '.$nome.'\n';
+        $mensagem .= 'Email: '.$email.'\n';
+        $mensagem .= 'Telefone: '.$telefone.'\n';
+        $mensagem .= 'Nome: '.$nome.'\n';
+        
+        if ($tipo = 'Parcela'){
+            $mensagem .= 'Parcela: '.$parcela.'\n';
+        } else {
+            $mensagem .= 'Credito: '.$credito.'\n';
+        }
+        
+        $mensagem .= 'Modelo: '.$modelo.'\n';
+
+        if ( wp_mail('yuri.bruno@agencia.life', 'Contato', $mensagem) ){
+            echo "Sua simulação foi enviada.";
+        } else {
+            echo "Erro, tente novamente.";
+        }           
+
+        wp_die();
+    } else {
+        wp_die('Todos os campos são obrigatórios.');
+    }
+}

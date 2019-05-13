@@ -14,10 +14,10 @@
 		<div class="modal-content">
 			<div class="modal-body">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<form id="form-simulador" action="" method="post">
-					<input type="text" name="nome" id="nome" placeholder="Nome" />
-                    <input type="text" name="email" id="email" placeholder="Email" />
-                    <input type="text" name="telefone" id="telefone" placeholder="Telefone" class="telefone" />
+				<form id="form-simulador" method="post" action="<?php echo get_template_directory_uri() . '/js/form-ajax.js'; ?>">
+					<input type="text" name="nomesimulador" id="nome" placeholder="Nome" />
+                    <input type="text" name="emailsimulador" id="email" placeholder="Email" />
+                    <input type="text" name="telefonesimulador" id="telefone" placeholder="Telefone" class="telefone" />
                     <label for="valor-de">Simular por valor de:</label>
                     <div style="display: flex;">
                     	<div class="radio-container">
@@ -29,14 +29,14 @@
 	                    	<span class="checkmark" id="credito-checkmark">Crédito</span>
 	                	</div>
 	                </div>
-                    <label for="range">Selecione o valor da parcela: <output style="color: #3A9D12;
-  font-family: Lato;
-  font-size: 25px;
-  font-weight: 900;
-  line-height: 20px;
-  float: right;"></output></label>
-                    <input type="range" min="0.00" max="10000.00" step="0.11" value="5000.00" data-rangeslider>
-            		
+	                <div class="range-parcela ativo">
+	                	<label for="range"><span>Selecione o valor da parcela:</span> <output style="color: #3A9D12; font-family: Lato;font-size: 25px;font-weight: 900;line-height: 20px;float: right;"></output></label>
+                    	<input type="range" min="300.00" max="3000.00" step="50" value="5000.00" data-rangeslider>	
+	                </div>
+	                <div class="range-credito">
+	                	<label for="range"><span>Selecione o valor da crédito:</span> <output style="color: #3A9D12; font-family: Lato;font-size: 25px;font-weight: 900;line-height: 20px;float: right;"></output></label>
+                    	<input type="range" min="30000.00" max="160000.00" step="50" value="75000.00" data-rangeslider>
+	                </div>            		
                     <label form="modelo-select">Escolha o modelo:</label>
                     <select>
 						<?php
@@ -75,6 +75,7 @@
                     <br>
                     <br>
                     <input type="submit" value="Quero receber uma simulação" id="salvar" />
+                    <input type="hidden" name="action" value="custom_action">
 				</form>
 			</div>
 		</div>
@@ -88,10 +89,10 @@
 		<div class="modal-content">
 			<div class="modal-body">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<form id="form-consultoria" action="" method="post">
-                    <input type="text" name="nome" id="nome" placeholder="Nome" />
-                    <input type="text" name="email" id="email" placeholder="Email" />
-                    <input type="text" name="telefone" id="telefone" placeholder="Telefone" class="telefone" />
+				<form id="form-consultoria" action="index.html" method="post">
+                    <input type="text" name="nome" id="nomeconsultoria" placeholder="Nome" />
+                    <input type="text" name="email" id="emailconsultoria" placeholder="Email" />
+                    <input type="text" name="telefone" id="telefoneconsultoria" placeholder="Telefone" class="telefone" />
                     <br/><br/>
                     <input type="submit" value="Quero receber uma consultoria" id="salvar" />
                 </form>
@@ -105,9 +106,9 @@
 		 <div class="row">
 		 	<div class="container">
 		 		<div class="row">
-		 			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-		 				<img src="<?php echo get_template_directory_uri(); ?>/img/logo-rodape.png" title="Simulador Chevrolet" style="height: 70px;">
-		 				<img src="<?php echo get_template_directory_uri(); ?>/img/logo-rodape-2.png" title="Simulador Chevrolet" style="height: 70px;margin-left: 20px;">
+		 			<div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 logo-rodape-container">
+		 				<img src="<?php echo get_template_directory_uri(); ?>/img/logo-rodape.png" title="Simulador Chevrolet" class="logo-rodape">
+		 				<img src="<?php echo get_template_directory_uri(); ?>/img/logo-rodape-2.png" title="Simulador Chevrolet" class="logo-rodape-2">
 		 			</div>
 		 			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 		 				<ul class="categorias-rodape">
@@ -120,17 +121,21 @@
 						</ul>
 		 			</div>
 		 			<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-		 				<span style="color: #DDBE6C;  font-family: Lato;  font-size: 22px;  font-weight: 700;  line-height: 28px;text-align: right; display: block;">
+		 				<span class="footer-contato-header" style="">
 		 					ENTRE EM CONTATO
 		 				</span>
 		 				<a href="mailto:atendimento@consorciochevroletonline.com.br">
-		 					<p style="color: #FFFFFF;font-family: Lato;font-size: 14px;font-weight: 700;line-height: 23px;text-align: right;">atendimento@consorciochevroletonline.com.br  <i class="far fa-envelope" style="font-size: 14px;margin-left: 5px;"></i>
+		 					<p class="footer-email">atendimento@consorciochevroletonline.com.br  <i class="far fa-envelope" style="font-size: 14px;margin-left: 5px;"></i>
 		 					</p>
 		 				</a>
-		 					<p style="color: #FFFFFF;font-family: Lato;font-size: 14px;font-weight: 700;line-height: 23px;text-align: right;">0800 030 1471  <i class="fas fa-phone" style="margin-left: 5px;"></i>
+		 				<a href="tel:08000301471">
+		 					<p class="footer-telefone">0800 030 1471  <i class="fas fa-phone" style="margin-left: 5px;"></i>
 		 					</p>
-		 				<a href="https://www.facebook.com/consorciochevroletonlineoficial/" target="_blank" class="link-face-rodape"><i class="fab fa-facebook-f"></i></a>
-		 				<a href="https://www.instagram.com/consorciochevroletonline/" target="_blank" class="link-insta-rodape"><i class="fab fa-instagram"></i></a>
+		 				</a>
+		 				<div class="footer-redes">
+		 					<a href="https://www.facebook.com/consorciochevroletonlineoficial/" target="_blank" class="link-face-rodape"><i class="fab fa-facebook-f"></i></a>
+		 					<a href="https://www.instagram.com/consorciochevroletonline/" target="_blank" class="link-insta-rodape"><i class="fab fa-instagram"></i></a>
+		 				</div>
 		 			</div>
 		 		</div>
 		 	</div>

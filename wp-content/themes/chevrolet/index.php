@@ -3,7 +3,7 @@
 ?>
 
 <!-- Banner last post -->
-<div class="container-fluid">
+<div class="container-fluid last-post">
 	<div class="row" style="margin-bottom: 30px;">
 		<ul class="full-banner">
 		<?php
@@ -39,14 +39,14 @@ $custom_query = new WP_Query( $args );
 						while($custom_query->have_posts()) :
 							$custom_query->the_post();
 					?>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="margin: 30px 0;">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 thumb" style="margin: 30px 0;">
 							<div class="row">
 								<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 									<?php the_post_thumbnail('thumbnail'); ?>	
 								</a>
 							</div>
 						</div>
-						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12" style="margin: 30px 0;">
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 info" style="margin: 30px 0;">
 							<div class="">
 								<div class="date category">
 									<!-- date | category -->

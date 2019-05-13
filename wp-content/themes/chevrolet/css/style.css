@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
-input:focus, a:focus, input:active, a:active, input:focus, a:focus{
+input:focus, a:focus, input:active, a:active, input:focus, a:focus, a:hover{
 	outline: none !important;
 	box-shadow: none !important;
-	text-decoration: none;
+	text-decoration: none !important;
 }  
 .brand{
 	height: 53px;
@@ -589,4 +589,44 @@ div#bs-example-navbar-collapse-1 input:-ms-input-placeholder { /* IE 10+ */
 }
 div#bs-example-navbar-collapse-1 input:-moz-placeholder { /* Firefox 18- */
   color: #fff;
+}
+.navbar-default .navbar-form {
+    float: right;
+}
+.navbar-default .navbar-collapse {
+    width: 65%;
+    float: left;
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border: none;
+}
+.logo-rodape{
+    height: 70px;
+}
+.logo-rodape-2{
+    height: 70px;
+    margin-left: 20px;
+}
+.footer-contato-header{
+    color: #DDBE6C;
+    font-family: Lato;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    text-align: right;
+    display: block;
+}
+.footer-email, .footer-telefone {
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 23px;
+    text-align: right;
+}
+.range-parcela, .range-credito {
+    display: none;
+}
+.range-parcela.ativo, .range-credito.ativo {
+    display: block;
 }

@@ -29,13 +29,19 @@
 			<div class="row">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 logo-container">
 							<a href="<?php get_site_url(); ?>">
-							<img class="brand" src="<?=get_template_directory_uri()?>/img/logo.jpg" alt="Consórcio Chevrolet">
-							<h1 style="color: #DDBE6C;font-family: Lato;font-size: 18px;font-weight: 900;line-height: 23px;margin: 0 0 0 130px;position: absolute;">
-								BLOG
-							</h1>
+								<img class="brand" src="<?=get_template_directory_uri()?>/img/logo.jpg" alt="Consórcio Chevrolet">
+								<h1 class="brand-blog" style="color: #DDBE6C;font-family: Lato;font-size: 18px;font-weight: 900;line-height: 23px;margin: 0 0 0 130px;position: absolute;">
+									BLOG
+								</h1>
 							</a>
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+						        <span class="sr-only">Toggle navigation</span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+					      	</button>
 						</div>
 						<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 							<button type="button" class="btn-default pull-right" data-toggle="modal" data-target="#consultoria">Fale com um consultor</button>
@@ -48,14 +54,18 @@
 	<nav class="navbar navbar-default">
 		<div class="container">
 			<div class="row">	
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<div class="collapse navbar-collapse" id="menu">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <i class="fas fa-times"></i>
+			      	</button>
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="#">Educação Financeira</a></li>
 						<li class=""><a href="#">CONSÓRCIO AUTOS</a></li>
 						<li class=""><a href="#">DICAS</a></li>
 					</ul>
-					<?php get_custom_search_form(); ?>
 				</div>
+				<?php get_custom_search_form(); ?>
 			</div>
 		</div>	
 	</nav>
