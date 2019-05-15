@@ -128,8 +128,8 @@
 		 					<p class="footer-email">atendimento@consorciochevroletonline.com.br  <i class="far fa-envelope" style="font-size: 14px;margin-left: 5px;"></i>
 		 					</p>
 		 				</a>
-		 				<a href="tel:08000301471">
-		 					<p class="footer-telefone">0800 030 1471  <i class="fas fa-phone" style="margin-left: 5px;"></i>
+		 				<a href="tel:08000311471">
+		 					<p class="footer-telefone">0800 031 1471  <i class="fas fa-phone" style="margin-left: 5px;"></i>
 		 					</p>
 		 				</a>
 		 				<div class="footer-redes">

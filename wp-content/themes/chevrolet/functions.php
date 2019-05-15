@@ -8,6 +8,8 @@ require get_template_directory() . '/inc/cleanup.php';
 
 add_theme_support( 'post-thumbnails' );
 
+add_filter('jpeg_quality', function($arg){return 100;});
+
 show_admin_bar(false);
 
 function custom_excerpt_length( $length ) {

@@ -78,8 +78,8 @@
 						<p>Atendimento Consórcio Nacional</p>
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 banner-contact-right">
-						<a href="tel:08000301471">
-							<span>0800 030 1471</span>
+						<a href="tel:08000311471">
+							<span>0800 031 1471</span>
 						</a>
 					</div>
 				</div>
