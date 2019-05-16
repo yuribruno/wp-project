@@ -647,6 +647,9 @@ ul.full-banner.slick-initialized.slick-slider li {
     font-size: 0;
     line-height: 0;
 }
+.nav.navbar-nav li.categories ul li a{
+    font-size: 13px;
+}
 .nav.navbar-nav li.categories ul li {
     margin-right: 25px;
 }
