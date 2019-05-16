@@ -630,3 +630,29 @@ div#bs-example-navbar-collapse-1 input:-moz-placeholder { /* Firefox 18- */
 .range-parcela.ativo, .range-credito.ativo {
     display: block;
 }
+ul.full-banner.slick-initialized.slick-slider li {
+    height: 500px;
+    color: #FFFFFF;
+    font-family: Lato;
+    font-size: 55px;
+    font-weight: 700;
+    line-height: 58px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 5px 4px 5px #4a4d54;
+}
+.nav.navbar-nav li.categories {
+    font-size: 0;
+    line-height: 0;
+}
+.nav.navbar-nav li.categories ul li {
+    margin-right: 25px;
+}
+.nav.navbar-nav li.categories ul {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+}

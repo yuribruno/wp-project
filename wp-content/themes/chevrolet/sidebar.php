@@ -66,9 +66,9 @@
 					</label>
 						<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email">
 					</div>
-						<div id="mce-responses" class="clear">
-							<div class="response" id="mce-error-response" style="display:none"></div>
-							<div class="response" id="mce-success-response" style="display:none"></div>
+						<div id="mce-responses" style="margin: 0;width: 100%;height: auto;padding: 0 15px;" class="clear">
+							<div class="response" id="mce-error-response" style="display:none;margin: 0;width: 100%;height: auto;padding: 15px 0;text-align: right;"></div>
+							<div class="response" id="mce-success-response" style="display:none;margin: 0;width: 100%;height: auto;padding: 15px 0;text-align: right;"></div>
 						</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 					    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6e728f223d8474a08fa4fd985_ae89674d62" tabindex="-1" value=""></div>
 					    <div class="clear"><input type="submit" value="Enviar" name="subscribe" id="mc-embedded-subscribe" class="button" style="background-color: #DDBE6C;  border-radius: 10px;  width: 180px;  height: 55px; color: #FFFFFF;  font-family: Lato;  font-size: 22px;  font-weight: 900;  line-height: 28px; margin-left: auto; display: block;"></div>

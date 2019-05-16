@@ -60,9 +60,13 @@
 				        <i class="fas fa-times"></i>
 			      	</button>
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">Educação Financeira</a></li>
-						<li class=""><a href="#">CONSÓRCIO AUTOS</a></li>
-						<li class=""><a href="#">DICAS</a></li>
+						<?php wp_list_categories( array(
+						        'orderby'    => 'name',
+						        'hide_title_if_empty' => true,
+						        'show_count' => false,
+						        'hide_empty' => 0,
+						        'include'    => array( 2, 3, 4, 5 )
+						) ); ?>
 					</ul>
 				</div>
 				<?php get_custom_search_form(); ?>
@@ -92,7 +96,11 @@
 			?>
 				<div class="container-fluid post-banner" style="margin: 30px auto;" >
 					<div class="row">
-						<?php the_post_thumbnail('full'); ?>
+						<ul class="full-banner">
+							<li style="background:url(<?php the_post_thumbnail_url(); ?>) center" >
+								<?php the_title() ?>	
+							</li>
+						</ul>
 					</div>
 				</div>
 			<?php

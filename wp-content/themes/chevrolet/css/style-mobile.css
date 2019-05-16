@@ -181,3 +181,16 @@ select {
     display: flex;
     align-items: center;
 }
+.nav.navbar-nav li.categories ul {
+    display: inline-block;
+    font-size: 16px;
+    height: 50px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+.nav.navbar-nav li.categories ul li {
+    margin-right: 25px;
+    width: 100%;
+}
