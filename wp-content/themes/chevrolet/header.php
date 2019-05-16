@@ -97,8 +97,8 @@
 				<div class="container-fluid post-banner" style="margin: 30px auto;" >
 					<div class="row">
 						<ul class="full-banner">
-							<li style="background:url(<?php the_post_thumbnail_url(); ?>) center" >
-								<?php the_title() ?>	
+							<li style="background:url(<?php the_post_thumbnail_url(); ?>) center; background-size: cover !important;" >
+								<span style="width: 80%"><?php the_title() ?><span>	
 							</li>
 						</ul>
 					</div>
